@@ -161,6 +161,13 @@ code {
     margin-left: 9px;
     font-size: 7px;
   }
+
+    .searchInput > span > i {
+    position: absolute;
+    margin-left: -0.8rem;
+    color: #fdfdfd;
+    margin-top: 0.4rem;
+  }
   }
   
   /* MOVIELIST COMPONENT */
