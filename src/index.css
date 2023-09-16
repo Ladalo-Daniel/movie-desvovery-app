@@ -128,7 +128,7 @@ code {
     .searchInput > input::placeholder{
     color: white;
     margin-left: 9px;
-    font-size: 10px;
+    font-size: 7px;
   }
   }
   @media screen and (max-width: 550px) {
@@ -159,7 +159,7 @@ code {
     .searchInput > input::placeholder{
     color: white;
     margin-left: 9px;
-    font-size: 10px;
+    font-size: 7px;
   }
   }
   
