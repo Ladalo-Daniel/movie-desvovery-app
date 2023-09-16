@@ -22,7 +22,7 @@ code {
     align-items: flex-start;
     height: 500px;
     width: 100%;
-    background-image: url('C:\Users\USER\Desktop\movie-app\src\img\mheader.jpeg');
+    background-image: url('../src/img/mheader.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
