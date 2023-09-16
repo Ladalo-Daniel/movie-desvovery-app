@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +13,374 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* HOME PAGE*/
+/* HEADER COMPONENT */
+
+.headerContainer{
+    color: rgb(255, 255, 255);
+    align-items: flex-start;
+    height: 500px;
+    width: 100%;
+    background-image: url('C:\Users\USER\Desktop\movie-app\src\img\mheader.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    opacity: 0.1 black;
+   }
+
+   .header{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 1rem;
+   }
+
+   .logocontainer{
+    display: flex;
+    align-items: center;
+   }
+
+   .logocontainer > img {
+    height: 50px;
+    width: 50px;
+   }
+   
+   .navbar-signup-container{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 10px;
+    font-size: 17px;
+   }
+   
+   .searchInput{
+     margin-top: 2rem;
+     color: white;
+   }
+
+   .searchInput > input {
+     width: 400px;
+     background-color: transparent;
+    color: rgb(253, 253, 253);
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 9px;
+  }
+
+  .searchInput > input::placeholder{
+    color: white;
+    margin-left: 9px;
+  }
+
+  .searchInput > span > i {
+    position: absolute;
+    margin-left: -2rem;
+    color: #fdfdfd;
+    margin-top: 0.4rem;
+  }
+  
+   .watchLater{
+    left: 0;
+    margin: 9px;
+    background-color: brown;
+    color: white;
+    padding: 7px;
+    border-radius: 9px;
+    width: 150px;
+    cursor: pointer;
+    border: 1px solid white;
+  }
+
+  .link{
+    cursor: pointer;
+    text-decoration: none;
+    color: blue;
+  }
+
+  .header-title{
+    margin: 1rem;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: 700px) {
+    .searchInput > input{
+      width: 200px;
+      padding: 4px;
+      font-size: 9px;
+    }
+    .navbar-signup-container{
+      gap: 0px;
+      margin: 1px;
+    }
+
+    .header-title{
+      margin: 1rem;
+      width: 60vw;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .searchInput > input{
+      width: 80px;
+      padding: 2px;
+      font-size:5px ;
+      padding: 4px;
+    }
+    .navbar-signup-container{
+      gap: 0px;
+      margin: 1px;
+    }
+    h1{
+      font-size: 15px;
+    }
+    .searchInput{
+      margin-top: 1rem;
+    }
+    .header-title{
+      margin: 1rem;
+      width: 60vw;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  /* MOVIELIST COMPONENT */
+
+  .movieListContainer{
+    margin-bottom: 5rem;
+  }
+  
+  .movieList {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 equal-width columns */
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+
+  .movieListImg {
+    height: 300px;
+    width: 200px;
+  }
+
+  .link{
+    cursor: pointer;
+    text-decoration: none;
+    color: blue;
+    
+  }
+
+  .featured{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+
+  .featured > p {
+    color: #9b152c;
+  }
+
+  .title-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .title-container > h1 {
+    color: blue;
+    font-size: 13px;
+  }
+
+  .title-container > p {
+    color: black;
+    font-size: 13px;
+  }
+
+  .loading{
+    font-size: 200px;
+    color: white;
+  }
+
+
+  @media screen and (max-width: 700px) {
+    .movieListImg {
+      height: 150px;
+      width: 100px;
+    }
+
+    .movieList{
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 0.5rem;
+    }
+
+  }
+
+
+  /* MOVIEDETAILPAGE COMPONENT */
+
+    .moviedetailWrapper{
+      display: flex;
+    }
+
+    .sideBar{
+      flex: 3;
+      background-color: #fdfdfd;
+      color: #353333;
+      border-right: 1px solid gray;
+      flex-direction: column;
+      border-radius: 25px 25px 0 0;
+      gap: 2rem;
+      height: 100vh;
+    }
+
+    .sidebar-ul{
+      list-style-type: none;
+      padding: 0px;
+    }
+
+    .sidebar-ul > li{
+       padding: 1.7rem;
+       border-top: 1px solid gray;
+       border-bottom: 1px solid gray;
+    }
+
+    .sidebar-ul > li > i {
+      color: #5a0614;
+      margin-right: 3px;
+    }
+
+    .sidebar-logo{
+      color: #9b152c;
+      margin: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    .sidebar-logo > img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+    .sidebar-content{
+      border: 1px solid rgb(91, 35, 46);
+      height: 200px;
+      width: 150px;
+      margin: 1rem;
+      border-radius: 20px;
+      align-self: center;
+    }
+
+    .movieDetails{
+      flex: 9;
+      margin-left: 1rem;
+    }
+
+    .movieDetails >img {
+      width: 70vw;
+      height: 60vh;
+      object-fit: cover;
+      margin-top: 1rem;
+      border-radius: 20px;
+    }
+
+    .moviedetailItem{
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .btn-movie-details{
+      padding: 1px 1px;
+      border: 1px solid brown;
+      color: #5a0614;
+      width: 70px;
+      border-radius: 9px;
+    }
+
+    .overview-container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1rem;
+    }
+
+    .watch{
+      padding: 10px;
+      width: 100px;
+      font-size: 8px;
+      color: white;
+      background-color: #9b152c;
+      border: 1px solid white;
+      border-radius: 9px;
+    }
+
+    .btn-watch{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    @media screen and (max-width: 700px) {
+      .sidebar-ul > li{
+        padding: 0.5rem;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+     }
+
+     .sidebar-content{
+      border: 1px solid rgb(91, 35, 46);
+      height: 200px;
+      width: 70px;
+      margin: 0.5rem;
+      border-radius: 20px;
+      align-self: center;
+    }
+
+    .moviedetailItem{
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn-movie-details{
+      padding: 1px 1px;
+      display: none;
+    }
+
+    .movieDetails >img {
+      width: 60vw;
+      height: 50vh;
+      object-fit: cover;
+      margin-top: 1rem;
+      border-radius: 20px;
+    }
+
+    .sidebar-ul > li{
+      padding: 1rem;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      font-size: 10px;
+   }
+
+   .movieDetails > h1 {
+    font-size: 5px;
+   }
+
+   .movieDetails > p{
+    font-size: 7px;
+   }
+
+   
+
+
+    }
+

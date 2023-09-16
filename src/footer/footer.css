@@ -1,0 +1,71 @@
+.bottom{
+    width: 100%;
+    height: 40px;
+    background-color:  brown;
+    color: rgb(251, 241, 241);
+    position: sticky;
+    bottom: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    position: fixed;
+}
+
+.topLeft, .topRight{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerIcon{
+    font-size: 20px;
+    margin-right: 20px;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+.topCenter{
+    flex: 6;
+}
+
+.topList{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    list-style: none;
+}
+
+.topListItem{
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.topSearchIcon{
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+
+}
+
+@media screen and (max-width: 360px) {
+    .topIcon{
+        margin-right: 10px;
+        font-size: 15px;
+    }
+
+    .bottom{
+        width: 100vw;
+    }
+
+}
+
+
+
+
+
+
