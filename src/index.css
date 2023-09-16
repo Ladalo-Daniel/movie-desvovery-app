@@ -124,6 +124,12 @@ code {
       flex-direction: column;
       align-items: flex-start;
     }
+
+    .searchInput > input::placeholder{
+    color: white;
+    margin-left: 9px;
+    font-size: 10px;
+  }
   }
   @media screen and (max-width: 550px) {
     .searchInput > input{
@@ -149,6 +155,12 @@ code {
       flex-direction: column;
       align-items: flex-start;
     }
+
+    .searchInput > input::placeholder{
+    color: white;
+    margin-left: 9px;
+    font-size: 10px;
+  }
   }
   
   /* MOVIELIST COMPONENT */
