@@ -52,7 +52,7 @@
 
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 700px) {
     .topIcon{
         margin-right: 10px;
         font-size: 15px;
@@ -61,6 +61,12 @@
     .bottom{
         width: 100vw;
     }
+    .topListItem{
+    margin-right: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+}
 
 }
 
