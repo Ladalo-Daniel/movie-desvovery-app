@@ -18,32 +18,43 @@ code {
 /* HEADER COMPONENT */
 
 .headerContainer{
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255);
     align-items: flex-start;
     height: 500px;
-    width: 100%;
-    background-image: url('C:\Users\USER\Desktop\movie-app\src\img\mheader.jpeg');
+    background-image: url('../src/img/mheader.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
-    opacity: 0.1 black;
+    width: 100%;
+    opacity: 0.1 black; */
+    width: 100%;
+    height: 600px;
+    flex-shrink: 0;
+    color: #ffffff;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../src/img/mheader.jpeg'), lightgray 50% / cover no-repeat;
    }
 
    .header{
     display: flex;
     justify-content: space-between;
     margin: auto 1rem;
+    align-items: center;
    }
 
    .logocontainer{
     display: flex;
     align-items: center;
+    cursor: pointer;
    }
 
    .logocontainer > img {
     height: 50px;
     width: 50px;
+    margin-right: 5px;
+   }
+   .headerContainer h1{
+    font-size: 16px;
    }
    
    .navbar-signup-container{
@@ -52,32 +63,57 @@ code {
     gap: 9px;
     margin: 10px;
     font-size: 17px;
+    cursor: pointer;
+   }
+
+   .navbar-signup-container > img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 5px;
    }
    
    .searchInput{
-     margin-top: 2rem;
      color: white;
    }
 
    .searchInput > input {
-     width: 400px;
-     background-color: transparent;
+    width: 500px;
+    background-color: transparent;
     color: rgb(253, 253, 253);
-    padding: 5px;
+    padding: 10px;
     border: 1px solid white;
     border-radius: 9px;
+    font-size: 17px;
+    
   }
 
   .searchInput > input::placeholder{
     color: white;
     margin-left: 9px;
+    line-height: 24px;
   }
 
   .searchInput > span > i {
     position: absolute;
     margin-left: -2rem;
     color: #fdfdfd;
-    margin-top: 0.4rem;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    font-size: 19px;
+
+  }
+
+  .movie-card-search{
+    position: absolute;
+    width: 400px;
+    height: 80vh;
+    overflow-y: scroll;
+    background-color: rgb(255, 255, 255);
+    color: rgb(36, 33, 33);
+    margin-top: 0.5rem;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20);
+    
   }
   
    .watchLater{
@@ -105,6 +141,7 @@ code {
     flex-direction: column;
     align-items: flex-start;
   }
+
 
   @media screen and (max-width: 700px) {
     .searchInput > input{
@@ -233,14 +270,21 @@ code {
     }
 
     .sideBar{
-      flex: 3;
+      width: 226px;
+      height: 982px;
+      flex-shrink: 0;
+      border-radius: 0px 45px 45px 0px;
+      border: 1px solid rgba(0, 0, 0, 0.30);
+      background: #FFF;
+      color:#0000004D;
+      /* flex: 3;
       background-color: #fdfdfd;
       color: #353333;
       border-right: 1px solid gray;
       flex-direction: column;
       border-radius: 25px 25px 0 0;
       gap: 2rem;
-      height: 100vh;
+      height: 100vh; */
     }
 
     .sidebar-ul{
@@ -249,14 +293,27 @@ code {
     }
 
     .sidebar-ul > li{
+      width: 61px;
+      height: 30px;
+      flex-shrink: 0;
        padding: 1.7rem;
        border-top: 1px solid gray;
        border-bottom: 1px solid gray;
+       color: #666;
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
     }
 
     .sidebar-ul > li > i {
-      color: #5a0614;
+      width: 25px;
+      height: 25px;
+      flex-shrink: 0;
+      color: #0c0a0a;
       margin-right: 3px;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20);
     }
 
     .sidebar-logo{
@@ -271,12 +328,29 @@ code {
       border-radius: 50%;
     }
     .sidebar-content{
-      border: 1px solid rgb(91, 35, 46);
+      width: 170px;
+      height: 210px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      border: 1px solid rgba(190, 18, 60, 0.70);
+      background: rgba(248, 231, 235, 0.40);
+      color: #BE123CB2;
+      /* border: 1px solid rgb(91, 35, 46);
       height: 200px;
       width: 150px;
       margin: 1rem;
       border-radius: 20px;
-      align-self: center;
+      align-self: center; */
+    }
+
+    .sidebar-content > p {
+      color: rgba(51, 51, 51, 0.80);
+      font-family: Poppins;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      color: #333333CC;
     }
 
     .movieDetails{

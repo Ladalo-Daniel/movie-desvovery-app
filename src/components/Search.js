@@ -1,25 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import SearchResult from "../components/SearchResult"
+import { AppContext } from '../context/AppContext'
 
-export default function Search({onSearch}) {
-  const [query, setQuery] = useState('');
+export default function Search() {
+  const { query, handleInputChange, handleKeyPress, handleSearchClick, open} = useContext(AppContext)
   
-  //Function to observe every input event/change
-  const handleInputChange = (e) => {
-    setQuery(e.target.value);
-  };
-
-  //Function to render search result when "search Icon" is clicked
-  const handleSearchClick = () => {
-    onSearch(query);
-  };
- 
-  //Function to render search result when "Enter key" is stroke
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      onSearch(query);
-    }
-  }
-
   return (
     <div className='searchInput'>
       <input 
@@ -30,6 +15,7 @@ export default function Search({onSearch}) {
       onKeyDown={handleKeyPress}
       ></input>
       <span onClick={handleSearchClick}><i  className='fas fa-search'></i></span>
+     {open && <SearchResult />}
     </div>
   )
 }

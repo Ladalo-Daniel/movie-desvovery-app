@@ -1,9 +1,11 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { AppContext } from '../context/AppContext';
 
 const MovieDetailsPage = () => {
-  const [movieDetails, setMovieDetails] = useState(null);
+  const {movieDetails, setMovieDetails} = useContext(AppContext)
+  //const [movieDetails, setMovieDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   

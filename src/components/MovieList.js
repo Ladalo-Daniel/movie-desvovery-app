@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import MovieCard from './MovieCard'
+import { AppContext } from '../context/AppContext'
 
-export default function MovieList({movies, searchResults, onSearch, isLoading, setIsLoading}) {
+export default function MovieList() {
+  const {movies} = useContext(AppContext)
   return (
     <div className='movieListContainer'>
       <div className='featured'>
@@ -10,7 +12,7 @@ export default function MovieList({movies, searchResults, onSearch, isLoading, s
       </div>
     <section  className='movieList'>
        {movies.map((movie) => (
-        <MovieCard movie={movie} searchResults={searchResults} onSearch={onSearch} isLoading={isLoading} setIsLoading={setIsLoading} key={movie.id} />
+        <MovieCard movie={movie} key={movie.id} />
        ))}
     </section>
     </div>
